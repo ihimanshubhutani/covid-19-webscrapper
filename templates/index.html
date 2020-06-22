@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Enter Country name you want to find details for</h1>
+
+    <form action="/country" method="get">
+      <label for="countries">Enter country:</label>
+      <input list="countries" name="country" id="country" />
+      <datalist id="countries">
+        {% for i in countries %}
+        <option value="{{i}}"></option>
+        {% endfor %}
+      </datalist>
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>
